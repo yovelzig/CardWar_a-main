@@ -1,3 +1,4 @@
+#pragma once
 #include "player.hpp"
 namespace ariel{
     class Game
@@ -6,21 +7,14 @@ namespace ariel{
         Player p1;
         Player p2;
     public:
-        Game(Player a , Player b){
-            // this->p1 = a;
-            // this->p2 = b;
-        }
-        void playTurn(){};
-        void printLastTurn(){};
-        void playAll(){}; 
-        void printWiner(){}; 
-        void printLog(){}; 
-        void printStats(){};
-        ~Game();
+        Game(Player ply1 , Player ply2);
+        void playTurn();
+        void printLastTurn();
+        void playAll(); 
+        void printWiner(); 
+        void printLog();
+        void printStats();
    
     };
-         Game::~Game()
-    {
-    }
 }
     

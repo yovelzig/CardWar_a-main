@@ -1,15 +1,17 @@
+#pragma once
 #include <string>
 namespace ariel{
-    class card
+    class Card
     {
     private:
-        int num;
-        string kind;
+        // int num;
+        // string kind;
     public:
-        card(int a , string b){
-            this->num = a;
-            this->kind = b;
-        };
+     Card();
+        // card(int a , string b){
+        //     this->num = a;
+        //     this->kind = b;
+        // };
         
     };
     
