@@ -59,12 +59,17 @@ TEST_CASE("check for errors") {
     CHECK_THROWS(game.printLastTurn());
     CHECK_THROWS(game.printLog());
     CHECK_THROWS(game.printWiner()); 
-    CHECK_THROWS(game.printStats()); 
+    CHECK_THROWS(game.printStats());
+    game.playAll();
+    CHECK_THROWS(game.playTurn()); 
+    CHECK_THROWS(game.playAll()); 
+
 } 
 TEST_CASE("check for error if we init only single Player") {
     Player p1("Alice");    
     Game game(p1,p1);
     CHECK_THROWS(game.playTurn());
+    CHECK_THROWS(p1.cardesTaken());
     CHECK_THROWS(game.playAll());
     CHECK_THROWS(game.printLog());
     CHECK_THROWS(game.printWiner()); 
